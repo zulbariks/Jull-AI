@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
+  >
+    <h1 class="text-4xl font-bold text-blue-600 mb-8">AI BY MUBAROK</h1>
+
+    <div class="flex space-x-4">
+      <input
+        type="text"
+        name="text"
+        id="question"
+        class="border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+        placeholder="Enter your question"
+      />
+      <button
+        onclick="sendReq()"
+        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Send
+      </button>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="mt-8 hidden">
+      <div class="flex justify-center items-center space-x-2">
+        <div
+          class="w-6 h-6 border-4 border-blue-600 border-dashed rounded-full animate-spin"
+        ></div>
+        <span class="text-blue-600">Loading...</span>
+      </div>
+    </div>
+
+    <div id="answer" class="mt-8 p-4 bg-white shadow-md rounded-lg w-80"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
